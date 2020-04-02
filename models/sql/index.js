@@ -1,10 +1,9 @@
 import Sequelize from 'sequelize';
 import databaseConnection from '../../setup/databaseConnection';
-
-import postModel from './post/postModel';
+//import postModel from './post/postModel';
 
 const models = {
-  Posts: databaseConnection.import('./post/postModel'),
+  Post: databaseConnection.import('./post/postModel'),
   // PostModel: databaseConnection(postModel),
 };
 
