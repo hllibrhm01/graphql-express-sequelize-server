@@ -1,4 +1,3 @@
-import createError from 'http-errors';
 import express from 'express';
 import path from 'path';
 import cookieParser from 'cookie-parser';
@@ -6,9 +5,6 @@ import logger from 'morgan';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import expressSession from 'express-session';
-
-import indexRouter from './routes/index';
-import usersRouter from './routes/users';
 
 export const initializeExpressApp = () => {
   const app = express();
@@ -31,7 +27,7 @@ export const initializeExpressApp = () => {
       secret: 'keyboard cat',
       resave: false,
       saveUninitialized: true,
-    })
+    }),
   );
 
   return app;

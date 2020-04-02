@@ -4,7 +4,7 @@ export const isAuthenticated = (req, res, next) => {
   } else {
     res
       .status(401)
-      .send({ error: "unauthorized" })
+      .send({ error: 'unauthorized' })
       .end();
   }
 };

@@ -1,6 +1,6 @@
-import { initializeExpressApp } from './setup-express';
+import { initializeExpressApp } from './setup/setup-express';
 import { initializeRoutes, initializeErrorRoutes } from './routes';
-import { BlogPost } from './models/sql/post/postModel';
+import Database from './models/sql';
 
 const app = initializeExpressApp();
 initializeExpressApp(app);

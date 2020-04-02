@@ -1,11 +1,13 @@
 import usersRouter from './users';
+//import graphqlRouter from './graphql';
 
 export const initializeRoutes = (app) => {
   app.use('/users', usersRouter);
+  //app.use('/graphql', graphqlRouter);
 };
 
 export const initializeErrorRoutes = (app) => {
-  app.use((req, res, next) => res.status(404).send('404 - Not Found'));
+  app.use((req, res) => res.status(404).send('404 - Not Found'));
   // error handler
   app.use((err, req, res) => {
     // set locals, only providing error in development
