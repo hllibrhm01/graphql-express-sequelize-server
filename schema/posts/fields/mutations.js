@@ -9,11 +9,14 @@ import { create, remove } from '../resolvers';
 export const postCreate = {
   type: PostType,
   args: {
+    post_id: {
+      name: 'post_id',
+      type: GraphQLString,
+    },
     post_title: {
       name: 'post_title',
       type: GraphQLString,
     },
-
     post: {
       name: 'post',
       type: GraphQLString,

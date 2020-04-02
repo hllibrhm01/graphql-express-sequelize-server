@@ -1,9 +1,9 @@
 import usersRouter from './users';
-// import graphqlRouter from './graphql';
+import graphqlRouter from './graphql';
 
 export const initializeRoutes = (app) => {
   app.use('/users', usersRouter);
-  // app.use('/graphql', graphqlRouter);
+  app.use('/graphql', graphqlRouter);
 };
 
 export const initializeErrorRoutes = (app) => {

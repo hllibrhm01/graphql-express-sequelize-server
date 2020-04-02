@@ -1,21 +1,20 @@
 import { Router } from 'express';
 import graphqlHTTP from 'express-graphql';
-// import { schema } from '../models/graphql/schema/schema';
-// /import { main } from '../models/graphql/main/main';
+import config from '../config/config.json';
+import schema from '../schema';
 
 const router = Router();
 
+/*
 router.use('/', graphqlHTTP({
   // schema,
   rootValue: main,
   graphiql: true,
 }));
-/*
-router.get('/', graphqlHTTP({
+*/
+router.use('/', graphqlHTTP({
   schema,
-  rootValue: main,
   graphiql: true,
 }));
-*/
 
 export default router;
